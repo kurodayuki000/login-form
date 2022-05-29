@@ -1,38 +1,112 @@
-.App {
+body {
+  background: rgb(69,59,244);
+  background: linear-gradient(90deg, rgba(69,59,244,0.7085798816568047) 0%, rgba(40,65,142,1) 100%);
+  overflow-y: hidden;
+}
+
+.formContainer {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.formContainer form {
+  background-color: rgb(247, 245, 245);
+  width: 70%;
+  max-width: 450px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 3px 5px 9px 0px #5d5c5c99;
+  border: 1px solid #dfdfdf;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.uiForm {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-evenly;
+  height: 400px;
 }
 
-.App-link {
-  color: #61dafb;
+.formField {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.formField input {
+  border: 1px solid gray;
+  padding: 20px;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+.passworsWrap {
+  position: relative;
+  width: 100%;
+}
+
+.passworsWrap input {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+
+.passworsWrap > p {
+  margin: 0;
+} 
+
+.passworsWrap img {
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.formField input:focus {
+  outline: none;
+}
+
+.formField label {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+button {
+  background-color: rgb(81, 81, 205);
+  width: 100%;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 30px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.6s;
+}
+
+button:hover {
+  background-color: rgb(45, 45, 239);
+}
+
+.errorsMsg {
+  color: red;
+  margin: 0;
+  align-self: flex-start;
+}
+
+.magOK {
+  color: green;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 15px;
 }
