@@ -7,7 +7,7 @@ const App = () => {
 const [formValues, setFormValues] = useState(initialValues);
 const [formErrors, setformErrors] = useState({});
 const [isSubmit, setIsSubmit] = useState(false);
-const [inputpass, setinputpass] = useState('text');
+const [inputpass, setinputpass] = useState('password');
 
 const handleChange = (e) => {
   const {name, value} = e.target;
